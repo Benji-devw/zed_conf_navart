@@ -1,0 +1,188 @@
+// Placer vos combinaisons de touches dans ce fichier pour remplacer les valeurs par défaut.
+//
+// ═══════════════════════════════════════════════════════════════════════════════
+// APERÇU RAPIDE DES RACCOURCIS
+// ═══════════════════════════════════════════════════════════════════════════════
+//
+// Éditeur — Édition
+//   Ctrl+E           commenter / décommenter (toggle)
+//   Shift+Alt+Z/S    déplacer la ligne vers le haut / bas
+//   Alt+Entrée       insérer une ligne en dessous
+//
+// Éditeur — Viewport
+//   Alt+O / Alt+N    scroll page haut / bas
+//
+// Éditeur — Curseur
+//   Alt+Z / Alt+S    ligne haut / bas
+//   Alt+K / Alt+J    5 lignes haut / bas
+//   Alt+Q / Alt+D    caractère gauche / droite
+//   Alt+W            début de ligne
+//   Alt+F            fin de ligne
+//   Alt+H / Alt+L    mot précédent / suivant
+//
+// Éditeur — Sélection
+//   Alt+E            étendre la sélection syntaxique
+//   Shift+Alt+Q/D    sélection caractère gauche / droite
+//   Shift+Alt+K/J    sélection ligne haut / bas
+//   Shift+Alt+H/L    sélection sous-mot gauche / droite
+//
+// Éditeur — Suppression
+//   Alt+U / Alt+I       backspace / suppr
+//   Shift+Alt+I         supprimer la ligne entière
+//   Ctrl+Alt+U/I        supprimer mot gauche / droite
+//
+// Onglets (AZERTY)
+//   Alt+& (Alt+1)    onglet précédent dans le panneau
+//   Alt+à (Alt+0)    onglet suivant dans le panneau
+//   Alt+é (Alt+2)    ouvrir le tab switcher
+//
+// Workspace
+//   Ctrl+Alt+H/L     focus panneau gauche / droit
+//   Ctrl+Alt+K/J     focus panneau haut / bas
+//   Alt+X            basculer l’outline (symboles)
+//   Ctrl+Alt+N       panneau Git (toggle)
+//   Ctrl+Alt+G       focus panneau Git
+//
+// ProjectPanel
+//   Alt+K / Alt+J    élément précédent / suivant
+//
+// ═══════════════════════════════════════════════════════════════════════════════
+//
+
+[
+  // ─── Editor ────────────────────────────────────────────────────────────────
+  {
+    "context": "Editor",
+    "bindings": {
+      // Édition
+      "ctrl-e": "editor::ToggleComments",
+      "shift-alt-z": "editor::MoveLineUp",
+      "shift-alt-s": "editor::MoveLineDown",
+      "alt-enter": "editor::NewlineBelow",
+
+      // Viewport
+      "alt-o": "editor::PageUp",
+      "alt-n": "editor::PageDown",
+
+      // Curseur
+      "alt-z": "editor::MoveUp",
+      "alt-s": "editor::MoveDown",
+      "alt-k": ["editor::MoveUpByLines", { "lines": 5 }],
+      "alt-j": ["editor::MoveDownByLines", { "lines": 5 }],
+      "alt-q": "editor::MoveLeft",
+      "alt-d": "editor::MoveRight",
+      "alt-w": "editor::MoveToBeginningOfLine",
+      "alt-f": "editor::MoveToEndOfLine",
+      "alt-h": "editor::MoveToPreviousWordStart",
+      "alt-l": "editor::MoveToNextWordEnd",
+
+      // Sélection
+      "alt-e": "editor::SelectLargerSyntaxNode",
+      "shift-alt-q": "editor::SelectLeft",
+      "shift-alt-d": "editor::SelectRight",
+      "shift-alt-k": "editor::SelectUp",
+      "shift-alt-j": "editor::SelectDown",
+      "shift-alt-h": "editor::SelectToPreviousSubwordStart",
+      "shift-alt-l": "editor::SelectToNextSubwordEnd",
+
+      // Suppression
+      "alt-u": "editor::Backspace",
+      "alt-i": "editor::Delete",
+      "shift-alt-i": "editor::DeleteLine",
+      "ctrl-alt-u": "editor::DeleteToPreviousWordStart",
+      "ctrl-alt-i": "editor::DeleteToNextWordEnd",
+    },
+  },
+
+  // ─── Pane ──────────────────────────────────────────────────────────────────
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-à": "pane::ActivateNextItem",
+      "alt-&": "pane::ActivatePreviousItem",
+      "alt-é": ["tab_switcher::Toggle", { "select_last": false }],
+    },
+  },
+
+  // ─── Workspace ─────────────────────────────────────────────────────────────
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-x": "outline::Toggle",
+      "ctrl-alt-h": "workspace::ActivatePaneLeft",
+      "ctrl-alt-l": "workspace::ActivatePaneRight",
+      "ctrl-alt-k": "workspace::ActivatePaneUp",
+      "ctrl-alt-j": "workspace::ActivatePaneDown",
+    },
+  },
+  // ─── ProjectPanel ─────────────────────────────────────────────────────────────
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "alt-k": "menu::SelectPrevious",
+      "alt-j": "menu::SelectNext",
+    },
+  },
+
+  // ─── Unbind globaux ────────────────────────────────────────────────────────
+  {
+    "unbind": {
+      "alt-shift-l": "lsp_tool::ToggleMenu",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "alt-shift-l": "agent::OpenRulesLibrary",
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "alt-&": ["pane::ActivateItem", 0],
+      "alt-é": ["pane::ActivateItem", 1],
+      "alt-à": "pane::ActivateLastItem",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "alt-é": ["workspace::ActivatePane", 1],
+    },
+  },
+  {
+    "context": "GitPanel && ChangesList && !GitBranchSelector",
+    "unbind": {
+      "up": "git_panel::PreviousEntry",
+    },
+  },
+  {
+    "context": "RunModal",
+    "unbind": {
+      "ctrl-tab": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-:": "agent::ToggleFocus",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-alt-n": "git_panel::Toggle",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-g": "git_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-g": "git_panel::ToggleFocus",
+    },
+  },
+]

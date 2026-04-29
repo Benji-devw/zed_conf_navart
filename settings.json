@@ -1,0 +1,106 @@
+{
+  // ─── Workbench ──────────────────────────────────────────────────────────
+  "tabs": {
+    "close_position": "left",
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "left",
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "autosave": "on_window_change",
+
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé (Blur)",
+    "dark": "Catppuccin Frappé (Blur)",
+  },
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 16,
+  "ui_font_family": ".SystemUIFont",
+  "rounded_selection": false,
+
+  // ─── Editor ─────────────────────────────────────────────────────────────
+  "buffer_font_size": 18,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_weight": 300.0,
+  "buffer_line_height": { "custom": 1.9 },
+  "current_line_highlight": "all",
+  "minimum_contrast_for_highlights": 45.0,
+  "vim_mode": false,
+
+  // --- Navigation & Visualisation ---
+  "minimap": {
+    "show": "always",
+    "current_line_highlight": "line",
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+  },
+
+  // ─── Intelligence Artificielle (Copilot / Gemini / GPT) ──────────────────────
+  "agent_ui_font_size": 16.0,
+  "agent_buffer_font_size": 16.0,
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "default_profile": "ask",
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "gemini-3-flash-preview",
+    },
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1",
+    },
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+
+  // ─── Terminal ───────────────────────────────────────────────────────────
+  "terminal": {
+    "flexible": true,
+    "font_family": "JetBrains Mono",
+    "font_size": 14, // Optionnel : souvent plus lisible un peu plus petit
+  },
+
+  // ─── Expérimental (overrides de thème) ─────────────────────────────────────────
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment.warning": {
+        "color": "#f38ba8", // Rouge Catppuccin
+        "font_weight": 700,
+      },
+      "comment.todo": {
+        "color": "#f9e2af", // Jaune Catppuccin
+        "font_weight": 700,
+      },
+    },
+    // "background appearance": "transparent",
+    "background": "#33344190",
+    "panel.background": "#33344110",
+    "status_bar.background": "#33344110",
+    "tab_bar.background": "#33344110",
+    "toolbar.background": "#33344110",
+
+    // "background Zen mode" : "transparent", (not working)
+    // "ZoomIn": {
+    //   "background": "#333441",
+    // },
+    // "ZoomOut": {
+    //   "background": "#333441",
+    // },
+  },
+}
