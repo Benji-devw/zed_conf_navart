@@ -44,6 +44,8 @@
 // ProjectPanel
 //   Alt+K / Alt+J        previous / next item
 //
+// Search
+//   Ctrl+Alt+F           focus project search (or deploy if already focused)
 // ═══════════════════════════════════════════════════════════════════════════════
 //
 
@@ -113,12 +115,39 @@
       "ctrl-alt-j": "workspace::ActivatePaneDown",
     },
   },
+
   // ─── ProjectPanel ─────────────────────────────────────────────────────────────
   {
     "context": "ProjectPanel",
     "bindings": {
       "alt-k": "menu::SelectPrevious",
       "alt-j": "menu::SelectNext",
+    },
+  },
+
+  // ─── Search ─────────────────────────────────────────────────────────────
+  {
+    "context": "ProjectSearchBar",
+    "bindings": {
+      "ctrl-alt-f": "search::FocusSearch",
+    },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-alt-f": "project_search::ToggleFocus",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-f": "pane::DeploySearch",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-alt-f": "buffer_search::Deploy",
     },
   },
 
@@ -181,6 +210,30 @@
     "context": "Workspace",
     "unbind": {
       "ctrl-shift-g": "git_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "ctrl-shift-f": "buffer_search::Deploy",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-f": "pane::DeploySearch",
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-shift-f": "project_search::ToggleFocus",
+    },
+  },
+  {
+    "context": "ProjectSearchBar",
+    "unbind": {
+      "ctrl-shift-f": "search::FocusSearch",
     },
   },
 ]

@@ -71,9 +71,10 @@
 
   // ─── Terminal ───────────────────────────────────────────────────────────
   "terminal": {
-    "flexible": true,
-    "font_family": "JetBrains Mono",
-    "font_size": 14, // Optionnel : souvent plus lisible un peu plus petit
+    "font_weight": 200.0,
+    "flexible": false,
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_size": 16, // Optionnel : souvent plus lisible un peu plus petit
   },
 
   // ─── Expérimental (overrides de thème) ─────────────────────────────────────────
