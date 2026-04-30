@@ -1,50 +1,48 @@
-// Placer vos combinaisons de touches dans ce fichier pour remplacer les valeurs par défaut.
-//
 // ═══════════════════════════════════════════════════════════════════════════════
-// APERÇU RAPIDE DES RACCOURCIS
+// QUICK SHORTCUTS REFERENCE
 // ═══════════════════════════════════════════════════════════════════════════════
 //
-// Éditeur — Édition
-//   Ctrl+E           commenter / décommenter (toggle)
-//   Shift+Alt+Z/S    déplacer la ligne vers le haut / bas
-//   Alt+Entrée       insérer une ligne en dessous
+// Editor — Editing
+//   Ctrl+E               toggle comment / uncomment
+//   Shift+Alt+Z/S        move line up / down
+//   Alt+Enter            insert line below
 //
-// Éditeur — Viewport
-//   Alt+O / Alt+N    scroll page haut / bas
+// Editor — Viewport
+//   Alt+O / Alt+N        scroll page up / down
 //
-// Éditeur — Curseur
-//   Alt+Z / Alt+S    ligne haut / bas
-//   Alt+K / Alt+J    5 lignes haut / bas
-//   Alt+Q / Alt+D    caractère gauche / droite
-//   Alt+W            début de ligne
-//   Alt+F            fin de ligne
-//   Alt+H / Alt+L    mot précédent / suivant
+// Editor — Cursor
+//   Alt+Z / Alt+S        line up / down
+//   Alt+K / Alt+J        5 lines up / down
+//   Alt+Q / Alt+D        character left / right
+//   Alt+W                beginning of line
+//   Alt+F                end of line
+//   Alt+H / Alt+L        previous / next word
 //
-// Éditeur — Sélection
-//   Alt+E            étendre la sélection syntaxique
-//   Shift+Alt+Q/D    sélection caractère gauche / droite
-//   Shift+Alt+K/J    sélection ligne haut / bas
-//   Shift+Alt+H/L    sélection sous-mot gauche / droite
+// Editor — Selection
+//   Alt+E                expand syntax selection
+//   Shift+Alt+Q/D        select character left / right
+//   Shift+Alt+K/J        select line up / down
+//   Shift+Alt+H/L        select subword left / right
 //
-// Éditeur — Suppression
-//   Alt+U / Alt+I       backspace / suppr
-//   Shift+Alt+I         supprimer la ligne entière
-//   Ctrl+Alt+U/I        supprimer mot gauche / droite
+// Editor — Deletion
+//   Alt+U / Alt+I        backspace / delete
+//   Shift+Alt+I          delete entire line
+//   Ctrl+Alt+U/I         delete word left / right
 //
-// Onglets (AZERTY)
-//   Alt+& (Alt+1)    onglet précédent dans le panneau
-//   Alt+à (Alt+0)    onglet suivant dans le panneau
-//   Alt+é (Alt+2)    ouvrir le tab switcher
+// Tabs (AZERTY)
+//   Alt+& (Alt+1)        previous tab in pane
+//   Alt+à (Alt+0)        next tab in pane
+//   Alt+é (Alt+2)        open tab switcher
 //
 // Workspace
-//   Ctrl+Alt+H/L     focus panneau gauche / droit
-//   Ctrl+Alt+K/J     focus panneau haut / bas
-//   Alt+X            basculer l’outline (symboles)
-//   Ctrl+Alt+N       panneau Git (toggle)
-//   Ctrl+Alt+G       focus panneau Git
+//   Ctrl+Alt+H/L         focus pane left / right
+//   Ctrl+Alt+K/J         focus pane up / down
+//   Alt+X                toggle outline (symbols)
+//   Ctrl+Alt+N           Git panel (toggle)
+//   Ctrl+Alt+G           focus Git panel
 //
 // ProjectPanel
-//   Alt+K / Alt+J    élément précédent / suivant
+//   Alt+K / Alt+J        previous / next item
 //
 // ═══════════════════════════════════════════════════════════════════════════════
 //
