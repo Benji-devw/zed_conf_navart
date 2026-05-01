@@ -8,7 +8,7 @@
 //   Alt+Enter            insert line below
 //
 // Editor — Viewport
-//   Alt+O / Alt+N        scroll page up / down
+//   Alt+O / Alt+N        scroll half page up / down
 //
 // Editor — Cursor
 //   Alt+Z / Alt+S        line up / down
@@ -61,9 +61,6 @@
       "alt-enter": "editor::NewlineBelow",
 
       // Viewport
-      "alt-o": "editor::PageUp",
-      "alt-n": "editor::PageDown",
-
       // Curseur
       "alt-z": "editor::MoveUp",
       "alt-s": "editor::MoveDown",
@@ -234,6 +231,16 @@
     "context": "ProjectSearchBar",
     "unbind": {
       "ctrl-shift-f": "search::FocusSearch",
+    },
+  },
+  {
+    "bindings": {
+      "alt-o": "editor::HalfPageUp",
+    },
+  },
+  {
+    "bindings": {
+      "alt-n": "editor::HalfPageDown",
     },
   },
 ]

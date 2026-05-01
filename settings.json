@@ -1,5 +1,9 @@
 {
   // ─── Workbench ──────────────────────────────────────────────────────────
+  "show_wrap_guides": false,
+  "colorize_brackets": true,
+  "always_treat_brackets_as_autoclosed": false,
+  "show_signature_help_after_edits": false,
   "tabs": {
     "close_position": "left",
   },
@@ -11,6 +15,10 @@
     "dock": "left",
   },
   "agent_servers": {
+    "your_agent": {
+      "type": "custom",
+      "command": "path_to_executable",
+    },
     "github-copilot-cli": {
       "type": "registry",
     },
@@ -25,6 +33,7 @@
     "light": "Catppuccin Frappé (Blur)",
     "dark": "Catppuccin Frappé (Blur)",
   },
+
   "icon_theme": "Material Icon Theme",
   "ui_font_size": 16,
   "ui_font_family": ".SystemUIFont",
@@ -45,6 +54,9 @@
     "current_line_highlight": "line",
   },
   "indent_guides": {
+    "background_coloring": "disabled",
+    "active_line_width": 4,
+    "line_width": 1,
     "enabled": true,
     "coloring": "indent_aware",
   },
@@ -79,22 +91,16 @@
 
   // ─── Expérimental (overrides de thème) ─────────────────────────────────────────
   "experimental.theme_overrides": {
-    "syntax": {
-      "comment.warning": {
-        "color": "#f38ba8", // Rouge Catppuccin
-        "font_weight": 700,
-      },
-      "comment.todo": {
-        "color": "#f9e2af", // Jaune Catppuccin
-        "font_weight": 700,
-      },
-    },
     // "background appearance": "transparent",
-    "background": "#33344190",
+    "background": "#33344199",
     "panel.background": "#33344110",
     "status_bar.background": "#33344110",
     "tab_bar.background": "#33344110",
     "toolbar.background": "#33344110",
+
+    // Active line and line number
+    "editor.active_line.background": "#33344120",
+    "editor.active_line_number": "#2ba0da",
 
     // "background Zen mode" : "transparent", (not working)
     // "ZoomIn": {
