@@ -1,5 +1,17 @@
 {
+  // ─── Todo Tree ──────────────────────────────────────────────────────────
+  // cargo install todo-tree
+  // Essentials Console cmds: {
+  // > tt scan --help
+  // > tt scan
+  // > tt scan --flat
+  // > tt scan -t TODO,FIXME
+  // > tt scan --json
+  // > tt scan --group-by-tag
+  // }
+
   // ─── Workbench ──────────────────────────────────────────────────────────
+  "cli_default_open_behavior": "existing_window",
   "show_wrap_guides": false,
   "colorize_brackets": true,
   "always_treat_brackets_as_autoclosed": false,
